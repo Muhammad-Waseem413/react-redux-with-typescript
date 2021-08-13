@@ -9,8 +9,8 @@ import { Dispatch } from "redux";
 import { State } from "../src/store/combinedReducer";
 
 const App: React.FC = () => {
-  const articles: IArticle[] = useSelector(
-    (state: State) => state.articles.articles
+  const { articles }: ArticleState = useSelector(
+    (state: State) => state.articles
   );
 
   const dispatch: Dispatch<any> = useDispatch();
